@@ -25,8 +25,7 @@ function projectClick(e) { 
     e.preventDefault();
 
     // In an event handler, $(this) refers to      
-    // the object that triggered the event     
-
+    // the object that triggered the event   
     var containingProject = $(this).closest(".project");
     var description = $(containingProject).find(".project-description");
     if (description.length == 0) {
@@ -34,4 +33,12 @@ function projectClick(e) { 
     } else {
        description.fadeToggle();
     }
+
+
+
+    /* Attempt at stretch goal : 
+     * Should shrink first picture */
+        $("testing").animate( { 
+            width: 100
+        }, 1000);
 }
